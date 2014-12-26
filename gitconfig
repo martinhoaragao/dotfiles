@@ -1,8 +1,6 @@
 [user]
-	name = Fernando Mendes
-	email = devfrmendes@gmail.com
-[github]
-	user = frmendes
+	name = Martinho Aragão
+	email = martinhoaragao@gmail.com
 [alias]
  	a = add
  	b = branch
@@ -18,8 +16,7 @@
 [color]
  	ui = true
 [core]
-	editor = vim -f
-[credential]
-   	helper = cache --timeout=3600
+	editor = subl3
+	excludesfile = dotfiles/gitignore_global
 [push]
 	default = simple
