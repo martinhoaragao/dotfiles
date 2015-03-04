@@ -21,3 +21,8 @@ log/
 *.log
 *.sql
 *.sqlite
+
+# Intellij
+.idea/
+*.iml
+*.iws
