@@ -17,6 +17,6 @@
  	ui = true
 [core]
 	editor = subl3
-	excludesfile = dotfiles/gitignore_global
+	excludesfile = ~/dev/dotfiles/gitignore_global
 [push]
 	default = simple
