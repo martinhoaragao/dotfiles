@@ -19,7 +19,6 @@ tmp/
 # db and logs
 log/
 *.log
-*.sql
 *.sqlite
 
 # Intellij
