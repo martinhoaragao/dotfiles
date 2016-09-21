@@ -11,6 +11,9 @@ Plugin 'gmarik/Vundle.vim'
 " Completion
 Plugin 'Shougo/neocomplete.vim'
 
+" Command execution - Make folder after plugin install!
+Plugin 'Shougo/vimproc.vim'
+
 " General Syntax
 Plugin 'scrooloose/syntastic'
 Plugin 'justinmk/vim-syntax-extra'
@@ -33,7 +36,9 @@ Plugin 'slim-template/vim-slim'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/javascript-libraries-syntax.vim'
 Plugin 'plasticboy/vim-markdown'
-Plugin 'godlygeek/tabular' " dependency for vim-markdown
+Plugin 'eagletmt/neco-ghc'
+Plugin 'enomsg/vim-haskellConcealPlus'
+Plugin 'eagletmt/ghcmod-vim'
 
 " Colors
 Plugin 'altercation/vim-colors-solarized'
@@ -119,6 +124,12 @@ set autoread
 "nmap <silent> <Up> gk
 " Be a man!
 
+" Type Lookup
+map <silent> tl :GhcModType <CR>
+" Type Insert
+map <silent> ti :GhcModTypeInsert() <CR>
+
+
 " Cycling through buffers
 exe "set <M-b>=\<Esc>b"
 exe "set <M-n>=\<Esc>n"
@@ -175,7 +186,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 let g:ctrlp_by_filename = 1
 
 " Reduce delay in Esc mode switching
-set ttimeoutlen=50
+set ttimeoutlen=0
 
 " Mapping ag.vim to Ctrl + G
 nnoremap <C-g> :Ag<Space>
