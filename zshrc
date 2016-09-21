@@ -30,7 +30,7 @@ ZSH_THEME="avit"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -49,7 +49,7 @@ ZSH_THEME="avit"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git atom autojump brew catimg rails vi-mode)
+plugins=(git atom autojump brew catimg rails colored-man-pages colorize tmux)
 
 # User configuration
 
@@ -83,11 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+eval $(docker-machine env default)
 eval "$(rbenv init -)"
 PATH=/opt/local/bin:$PATH
+PATH=~/.cabal/bin:$PATH
 
 # Vi Mode
-bindkey -v
+# bindkey -v
 
 bindkey '^P' up-history
 bindkey '^N' down-history
@@ -95,3 +97,10 @@ bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
 export KEYTIMEOUT=1
+
+alias pdflatex="/Library/TeX/Root/bin/x86_64-darwin/pdflatex"
+alias sicstus="/Applications/sicstus4.3.0/bin/sicstus"
+alias egrep="egrep --color=auto"
+alias vim="nvim"
+alias v="nvim"
+alias docker-quickstart="source /Applications/Docker/Docker\ Quickstart\ Terminal.app/Contents/Resources/Scripts/start.sh"
